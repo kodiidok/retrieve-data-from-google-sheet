@@ -1,0 +1,22 @@
+<script>
+  function display(ar) {
+    // eslint-disable-next-line prefer-destructuring
+    document.getElementById('name').innerHTML = ar[1][0];
+  }
+
+  function addDropDownData(data) {
+    const objSelect = document.getElementById('selectName');
+    const objOption = document.createElement('option');
+    objOption.value = '';
+    objOption.text = '';
+    objSelect.appendChild(objOption);
+    data.forEach(function (item) {
+      const option = document.createElement('option');
+      // eslint-disable-next-line prefer-destructuring
+      option.value = item[0];
+      // eslint-disable-next-line prefer-destructuring
+      option.text = item[0];
+      objSelect.appendChild(option);
+    });
+  }
+</script>
